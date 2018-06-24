@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<h1>test</h1>
+		<video id="videoPlayer" controls>
+			<source src="http://localhost:3000/video" type="video/mp4">
+		</video>
+		<script>
+			document.addEventListener('DOMContentLoaded', init, false);
+
+			function init() {
+				const VP = document.getElementById('videoPlayer')
+				const VPToggle = document.getElementById('toggleButton')
+
+				VPToggle.addEventListener('click', function() {
+					if (VP.paused) VP.play()
+					else VP.pause()
+				})
+			}
+		</script>
+	</body>
+</html>
